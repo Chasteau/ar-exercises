@@ -13,3 +13,6 @@ store6 = Store.create(name: "Yaletown", annual_revenue: 430000, mens_apparel: tr
 
 mens_stores = Store.all.where(mens_apparel: true)
 mens_stores.each {|store| puts store = "Store: #{store.name} => Ar: #{store.annual_revenue}"}
+
+womens_store = Store.all.where(womens_apparel: true).where('annual_revenue >= 100000')
+womens_store.each{|store| puts store = "Store: #{store.name} => Ar: #{store.annual_revenue}"}
