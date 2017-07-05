@@ -3,6 +3,7 @@ require 'active_record'
 require_relative 'lib/store'
 require_relative 'lib/employee'
 
+
 # Output messages from Active Record to standard out
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
@@ -10,8 +11,8 @@ puts 'Establishing connection to database ...'
 ActiveRecord::Base.establish_connection(
   adapter: 'postgresql',
   database: 'ar_exercises',
-  username: 'development',
-  password: 'development',
+  username: 'ar_exercises',
+  password: 'ar_exercises',
   host: 'localhost',
   port: 5432,
   pool: 5,
